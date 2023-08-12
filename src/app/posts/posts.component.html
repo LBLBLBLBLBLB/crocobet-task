@@ -1,5 +1,10 @@
-<div *ngFor="let post of posts">
-  <h2>title {{ post.title }}</h2>
-  <h2>body {{ post.body }}</h2>
-  <span></span>
+<button (click)="onMainPageClick()">Home Page</button>
+<button (click)="onGoBackClick()">Go Back</button>
+
+<div class="card-container">
+  <div *ngFor="let post of posts">
+    <h2>title {{ post.title }}</h2>
+    <h2>body {{ post.body }}</h2>
+    <span></span>
+  </div>
 </div>
