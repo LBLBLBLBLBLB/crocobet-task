@@ -1,5 +1,18 @@
 <h2>User Details</h2>
+<button (click)="onMainPageClick()">Home Page</button>
+<div>
+  <button (click)="onGoBackClick()">Go Back</button>
+  <button (click)="onPostsClick()">Posts</button>
+</div>
 <div *ngIf="userDetails">
-  <p><strong>Name:</strong> {{ userDetails.name }}</p>
-  <p><strong>Email:</strong> {{ userDetails.email }}</p>
+  <p><span>Name:</span> {{ userDetails.name }}</p>
+  <p><span>Email:</span> {{ userDetails.email }}</p>
+  <p><span>Phone Number:</span> {{ userDetails.phone }}</p>
+  <p><span>Website:</span> {{ userDetails.website }}</p>
+  <p><span>Company:</span> {{ userDetails.company.name }}</p>
+  <p>
+    <span>Address:</span> {{ userDetails.address.city }}, St.{{
+      userDetails.address.street
+    }}
+  </p>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -11,7 +11,11 @@ export class UsersDetailedComponent implements OnInit {
   userId: number = 0;
   userDetails: any;
 
-  constructor(private route: ActivatedRoute, private http: HttpClient) {}
+  constructor(
+    private route: ActivatedRoute,
+    private http: HttpClient,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
@@ -24,5 +28,15 @@ export class UsersDetailedComponent implements OnInit {
           console.log('Fetched user details:', data);
         });
     });
+  }
+
+  onGoBackClick(): void {
+    this.router.navigate(['/']);
+  }
+  onMainPageClick(): void {
+    this.router.navigate(['/']);
+  }
+  onPostsClick(): void {
+    this.router.navigate(['/posts']);
   }
 }
