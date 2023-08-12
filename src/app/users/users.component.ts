@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class UsersComponent implements OnInit {
   users: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.http
@@ -17,5 +18,8 @@ export class UsersComponent implements OnInit {
       .subscribe((data) => {
         this.users = data;
       });
+  }
+  onDetailedButtonClick(userId: number): void {
+    this.router.navigate(['/users-detailed', userId]);
   }
 }

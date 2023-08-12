@@ -5,12 +5,11 @@
     მომხმარებლის სახელები
   </caption>
   <tbody>
-    <ng-container *ngFor="let user of users; let i = index">
-      <tr *ngIf="i % 3 === 0">
-        <td>{{ users[i]?.name }}</td>
-        <td>{{ users[i + 1]?.name }}</td>
-        <td>{{ users[i + 2]?.name }}</td>
-      </tr>
-    </ng-container>
+    <tr *ngFor="let user of users">
+      <td>
+        {{ user.name }}
+        <button (click)="onDetailedButtonClick(user.id)">Detailed</button>
+      </td>
+    </tr>
   </tbody>
 </table>
