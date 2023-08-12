@@ -2,4 +2,44 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  padding-bottom: 10rem;
+}
+.card {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 14rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+h2 {
+  position: relative;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: green;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+.card:hover h2::after {
+  transform: scale(1);
+  transform-origin: bottom left;
+}
+p {
+  font-size: 1.2rem;
+}
+h2::first-letter,
+p::first-letter {
+  text-transform: uppercase;
 }

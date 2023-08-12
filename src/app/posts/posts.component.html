@@ -2,9 +2,9 @@
 <button (click)="onGoBackClick()">Go Back</button>
 
 <div class="card-container">
-  <div *ngFor="let post of posts">
-    <h2>title {{ post.title }}</h2>
-    <h2>body {{ post.body }}</h2>
+  <div *ngFor="let post of posts" class="card">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
     <span></span>
   </div>
 </div>
