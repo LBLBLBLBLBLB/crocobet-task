@@ -10,6 +10,8 @@ html {
 }
 body {
   font-family: Rubik, sans-serif;
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   width: 50%;
   margin: 0 auto;
   background-color: #3aafa9;
