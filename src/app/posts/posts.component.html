@@ -1,5 +1,7 @@
-<button (click)="onMainPageClick()">Home Page</button>
-<button (click)="onGoBackClick()">Go Back</button>
+<div class="btn-cont">
+  <button (click)="onMainPageClick()">მთავარი გვერდი</button>
+  <button (click)="onGoBackClick()">უკან დაბრუნება</button>
+</div>
 
 <div class="card-container">
   <div *ngFor="let post of posts" class="card">

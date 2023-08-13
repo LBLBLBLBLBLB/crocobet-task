@@ -43,3 +43,10 @@ h2::first-letter,
 p::first-letter {
   text-transform: uppercase;
 }
+
+.btn-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}

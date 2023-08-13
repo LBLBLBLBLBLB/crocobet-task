@@ -1,18 +1,38 @@
-<h2>User Details</h2>
-<button (click)="onMainPageClick()">Home Page</button>
-<div>
-  <button (click)="onGoBackClick()">Go Back</button>
-  <button (click)="onPostsClick()">Posts</button>
+<div class="user-head">
+  <h2>მომხმარებლის სრული ინფორმაცია</h2>
+  <button (click)="onMainPageClick()">მთავარი გვერდი</button>
 </div>
-<div *ngIf="userDetails">
-  <p><span>Name:</span> {{ userDetails.name }}</p>
-  <p><span>Email:</span> {{ userDetails.email }}</p>
-  <p><span>Phone Number:</span> {{ userDetails.phone }}</p>
-  <p><span>Website:</span> {{ userDetails.website }}</p>
-  <p><span>Company:</span> {{ userDetails.company.name }}</p>
-  <p>
-    <span>Address:</span> {{ userDetails.address.city }}, St.{{
-      userDetails.address.street
-    }}
-  </p>
+<div class="btn-cont">
+  <button (click)="onPostsClick()">მომხმარებლის პოსტები</button>
+  <button (click)="onGoBackClick()">უკან დაბრუნება</button>
+</div>
+<div *ngIf="userDetails" class="user-card">
+  <div class="user-det">
+    <img src="../../assets/user-ic.png" alt="" />
+    <p><span>Full Name:</span> {{ userDetails.name }}</p>
+  </div>
+  <div class="user-det">
+    <img src="../../assets/email-ic.png" alt="" />
+    <p><span>Email:</span> {{ userDetails.email }}</p>
+  </div>
+  <div class="user-det">
+    <img src="../../assets/phone-ic.png" alt="" />
+    <p><span>Phone Number:</span> {{ userDetails.phone }}</p>
+  </div>
+  <div class="user-det">
+    <img src="../../assets/website-ic.png" alt="" />
+    <p><span>Website:</span> {{ userDetails.website }}</p>
+  </div>
+  <div class="user-det">
+    <img src="../../assets/company-ic.png" alt="" />
+    <p><span>Company:</span> {{ userDetails.company.name }}</p>
+  </div>
+  <div class="user-det">
+    <img src="../../assets/location-ic.png" alt="" />
+    <p>
+      <span>Address:</span> {{ userDetails.address.city }}, St.{{
+        userDetails.address.street
+      }}
+    </p>
+  </div>
 </div>

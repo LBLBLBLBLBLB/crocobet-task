@@ -1,15 +1,29 @@
-<p>users works!</p>
-
-<table>
-  <caption>
-    მომხმარებლის სახელები
-  </caption>
-  <tbody>
-    <tr *ngFor="let user of users">
-      <td>
-        {{ user.name }}
-        <button (click)="onDetailedButtonClick(user.id)">Detailed</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="users-container">
+  <div>
+    <p>
+      ვებ აპლიკაცია, რომელიც შექმნილია Angular-ით. აპლიკაციას API-დან მოაქვს
+      ინფორმაცია მომხმარებლების დეტალური ინფორმაციისა და მათი პოსტების
+    </p>
+  </div>
+  <table>
+    <caption>
+      მომხმარებლები
+    </caption>
+    <thead>
+      <th>ID</th>
+      <th>სახელები</th>
+      <th>დეტალები</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>
+          {{ user.name }}
+        </td>
+        <td>
+          <button (click)="onDetailedButtonClick(user.id)">დეტალურად</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

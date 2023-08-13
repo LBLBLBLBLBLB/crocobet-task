@@ -1,3 +1,9 @@
+p {
+  margin-bottom: 8rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
 table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -8,10 +14,16 @@ caption {
   font-size: 1.8rem;
   padding: 2rem 0;
 }
-
-td {
+th {
+  background-color: #f5f5f5;
+  font-size: 2rem;
+  font-weight: 700;
+}
+td,
+th {
   border: 1px solid black;
   padding: 1.5rem 0.8rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }

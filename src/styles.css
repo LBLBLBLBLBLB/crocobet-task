@@ -13,6 +13,7 @@ body {
   max-width: 50%;
   margin: 0 auto;
   background-color: var(--background);
+  padding: 8rem 0;
 }
 button {
   border: none;
