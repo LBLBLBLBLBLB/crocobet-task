@@ -1,8 +1,12 @@
 <div class="users-container">
   <div>
     <p>
-      ვებ აპლიკაცია, რომელიც შექმნილია Angular-ით. აპლიკაციას API-დან მოაქვს
-      ინფორმაცია მომხმარებლების დეტალური ინფორმაციისა და მათი პოსტების
+      ვებ აპლიკაცია, რომელიც შექმნილია <span class="angular"> Angular</span>-ით.
+      აპლიკაციას API-დან მოაქვს
+      <span class="bold-txt"
+        >მომხმარებლების სახელები, მათ დეტალური ინფორმაცია და პოსტები </span
+      >. პირველ გვერდზე მოცემულია მომხმარებლის სახელები, შემდეგ გვერდზე დეტალური
+      ინფორმაცია, ხოლო ბოლო გვერდზე მოცემულია მომხმარებლის პოსტები.
     </p>
   </div>
   <table>
@@ -21,7 +25,9 @@
           {{ user.name }}
         </td>
         <td>
-          <button (click)="onDetailedButtonClick(user.id)">დეტალურად</button>
+          <button (click)="onDetailedButtonClick(user.id)" class="btn-detailed">
+            დეტალურად
+          </button>
         </td>
       </tr>
     </tbody>

@@ -2,6 +2,16 @@ p {
   margin-bottom: 8rem;
   font-size: 1.8rem;
   text-align: center;
+  color: #212121;
+}
+.angular {
+  color: #ff5252;
+  font-weight: bold;
+  text-shadow: 0 0 2px #ff5252;
+}
+.bold-txt {
+  font-weight: bold;
+  color: #388e3c;
 }
 
 table {
@@ -13,17 +23,67 @@ caption {
   background-color: #f2f2f2;
   font-size: 1.8rem;
   padding: 2rem 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 th {
-  background-color: #f5f5f5;
+  background-color: #999;
   font-size: 2rem;
   font-weight: 700;
+  color: white;
 }
 td,
 th {
-  border: 1px solid black;
   padding: 1.5rem 0.8rem;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 600;
+}
+tr:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
+.btn-detailed {
+  position: relative;
+  color: #fff;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  overflow: hidden;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.btn-detailed::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #388e3c;
+  border-radius: 1rem;
+  z-index: -2;
+}
+
+.btn-detailed::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #ff5252;
+  transition: all 0.3s;
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+.btn-detailed:hover {
+  color: #fff;
+}
+
+.btn-detailed:hover::before {
+  width: 100%;
 }
