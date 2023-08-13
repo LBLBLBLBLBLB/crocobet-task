@@ -1,38 +1,54 @@
-<div class="user-head">
-  <h2>მომხმარებლის სრული ინფორმაცია</h2>
-  <button (click)="onMainPageClick()">მთავარი გვერდი</button>
-</div>
 <div class="btn-cont">
-  <button (click)="onPostsClick()">მომხმარებლის პოსტები</button>
-  <button (click)="onGoBackClick()">უკან დაბრუნება</button>
+  <button (click)="onGoBackClick()" class="home-back-btn">
+    უკან დაბრუნება
+  </button>
+  <button (click)="onMainPageClick()" class="home-back-btn">
+    მთავარი გვერდი
+  </button>
+</div>
+<div class="user-head">
+  <h2>მომხმარებლის სრული ინფორმაცია:</h2>
+  <button (click)="onPostsClick()" class="posts-btn">
+    მომხმარებლის პოსტები
+  </button>
 </div>
 <div *ngIf="userDetails" class="user-card">
-  <div class="user-det">
+  <div class="user-det name">
     <img src="../../assets/user-ic.png" alt="" />
-    <p><span>Full Name:</span> {{ userDetails.name }}</p>
+    <p><span>Full Name: </span> {{ userDetails.name }}</p>
+  </div>
+  <div class="user-det name">
+    <img src="../../assets/at-symbol-ic.png" alt="" />
+    <p><span>Username: </span> {{ userDetails.username }}</p>
   </div>
   <div class="user-det">
     <img src="../../assets/email-ic.png" alt="" />
-    <p><span>Email:</span> {{ userDetails.email }}</p>
+    <p><span>Email: </span> {{ userDetails.email }}</p>
   </div>
   <div class="user-det">
     <img src="../../assets/phone-ic.png" alt="" />
-    <p><span>Phone Number:</span> {{ userDetails.phone }}</p>
+    <p><span>Phone Number: </span> {{ userDetails.phone }}</p>
   </div>
   <div class="user-det">
     <img src="../../assets/website-ic.png" alt="" />
-    <p><span>Website:</span> {{ userDetails.website }}</p>
+    <p><span>Website: </span> {{ userDetails.website }}</p>
+  </div>
+
+  <div class="user-det">
+    <img src="../../assets/buildings-ic.png" alt="" />
+    <p><span>City: </span>{{ userDetails.address.city }}</p>
+  </div>
+
+  <div class="user-det">
+    <img src="../../assets/location-ic.png" alt="" />
+    <p><span>Address: </span> St.{{ userDetails.address.street }}</p>
+  </div>
+  <div class="user-det">
+    <img src="../../assets/zip-ic.png" alt="" />
+    <p><span>Zipcode: </span> {{ userDetails.address.zipcode }}</p>
   </div>
   <div class="user-det">
     <img src="../../assets/company-ic.png" alt="" />
-    <p><span>Company:</span> {{ userDetails.company.name }}</p>
-  </div>
-  <div class="user-det">
-    <img src="../../assets/location-ic.png" alt="" />
-    <p>
-      <span>Address:</span> {{ userDetails.address.city }}, St.{{
-        userDetails.address.street
-      }}
-    </p>
+    <p><span>Company: </span> {{ userDetails.company.name }}</p>
   </div>
 </div>

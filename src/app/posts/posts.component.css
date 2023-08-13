@@ -28,7 +28,7 @@ h2::after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: green;
+  background-color: #17252a;
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
@@ -38,6 +38,8 @@ h2::after {
 }
 p {
   font-size: 1.2rem;
+  color: #def2f1;
+  font-weight: 500;
 }
 h2::first-letter,
 p::first-letter {
