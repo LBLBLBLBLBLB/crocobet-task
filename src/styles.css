@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: Rubik, sans-serif;
-  max-width: 50%;
+  width: 50%;
   margin: 0 auto;
   background-color: #3aafa9;
   padding: 8rem 0;
@@ -39,4 +39,27 @@ button {
 .home-back-btn:hover {
   background-color: #17252a;
   color: #def2f1;
+}
+@media (max-width: 1023px) {
+  body {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 54.1%;
+  }
+  button {
+    padding: 1rem 2rem;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 48%;
+  }
+}
+@media (max-width: 350px) {
+  html {
+    font-size: 44%;
+  }
 }

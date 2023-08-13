@@ -47,3 +47,15 @@ p {
   scale: 1.05;
   background-color: #c4e7e5;
 }
+@media (max-width: 610px) {
+  p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 610px) {
+  p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
